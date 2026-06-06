@@ -1,0 +1,29 @@
+{
+  "directories": [
+    "docs",
+    "docs/architecture",
+    "scripts",
+    "scripts/automation",
+    "scripts/diagrams",
+    "scripts/analysis",
+    "scripts/ai-agent"
+  ],
+  "files": [
+    "requirements.txt",
+    "index.html",
+    "scripts/automation/repo_analyzer.py",
+    "scripts/automation/diagram_generator.py",
+    "scripts/automation/readme_generator.py",
+    "scripts/automation/knowledge_graph.py",
+    "scripts/ai-agent/doc_agent.py"
+  ],
+  "dependencies": [
+    "pyyaml",
+    "requests",
+    "os",
+    "pathlib",
+    "json",
+    "ast"
+  ],
+  "frameworks": []
+}

@@ -1,0 +1,13 @@
+graph TD
+    Root[Repository]
+    Root --> scripts[scripts]
+    scripts --> scripts_files[Files: 5]
+    Root --> docs[docs]
+    Root --> Root_files[Root Files: 2]
+    Root --> Deps[Dependencies]
+    Deps --> pyyaml[pyyaml]
+    Deps --> requests[requests]
+    Deps --> os[os]
+    Deps --> pathlib[pathlib]
+    Deps --> json[json]
+    Deps --> MoreDeps[... 1 more]
