@@ -1,29 +1,32 @@
 {
   "directories": [
-    "docs",
-    "docs/architecture",
     "scripts",
-    "scripts/automation",
     "scripts/diagrams",
-    "scripts/analysis",
-    "scripts/ai-agent"
+    "scripts/ai-agent",
+    "scripts/automation"
   ],
   "files": [
+    "repo_analysis.json",
     "requirements.txt",
+    "ai_summary.md",
     "index.html",
-    "scripts/automation/repo_analyzer.py",
-    "scripts/automation/diagram_generator.py",
+    "README.md",
+    "scripts/diagrams/knowledge_graph.json",
+    "scripts/diagrams/architecture.mermaid",
+    "scripts/diagrams/interactive_architecture.html",
+    "scripts/ai-agent/doc_agent.py",
     "scripts/automation/readme_generator.py",
-    "scripts/automation/knowledge_graph.py",
-    "scripts/ai-agent/doc_agent.py"
+    "scripts/automation/diagram_generator.py",
+    "scripts/automation/repo_analyzer.py",
+    "scripts/automation/knowledge_graph.py"
   ],
   "dependencies": [
-    "pyyaml",
-    "requests",
-    "os",
-    "pathlib",
     "json",
-    "ast"
+    "pathlib",
+    "os",
+    "ast",
+    "requests",
+    "pyyaml"
   ],
   "frameworks": []
 }
