@@ -6,18 +6,18 @@
       "type": "root"
     },
     {
+      "id": "docs",
+      "label": "docs",
+      "type": "directory"
+    },
+    {
+      "id": "docs/architecture",
+      "label": "docs/architecture",
+      "type": "directory"
+    },
+    {
       "id": "scripts",
       "label": "scripts",
-      "type": "directory"
-    },
-    {
-      "id": "scripts/diagrams",
-      "label": "scripts/diagrams",
-      "type": "directory"
-    },
-    {
-      "id": "scripts/ai-agent",
-      "label": "scripts/ai-agent",
       "type": "directory"
     },
     {
@@ -26,18 +26,23 @@
       "type": "directory"
     },
     {
-      "id": "repo_analysis.json",
-      "label": "repo_analysis.json",
-      "type": "file"
+      "id": "scripts/diagrams",
+      "label": "scripts/diagrams",
+      "type": "directory"
+    },
+    {
+      "id": "scripts/analysis",
+      "label": "scripts/analysis",
+      "type": "directory"
+    },
+    {
+      "id": "scripts/ai-agent",
+      "label": "scripts/ai-agent",
+      "type": "directory"
     },
     {
       "id": "requirements.txt",
       "label": "requirements.txt",
-      "type": "file"
-    },
-    {
-      "id": "ai_summary.md",
-      "label": "ai_summary.md",
       "type": "file"
     },
     {
@@ -46,33 +51,8 @@
       "type": "file"
     },
     {
-      "id": "README.md",
-      "label": "README.md",
-      "type": "file"
-    },
-    {
-      "id": "scripts/diagrams/knowledge_graph.json",
-      "label": "knowledge_graph.json",
-      "type": "file"
-    },
-    {
-      "id": "scripts/diagrams/architecture.mermaid",
-      "label": "architecture.mermaid",
-      "type": "file"
-    },
-    {
-      "id": "scripts/diagrams/interactive_architecture.html",
-      "label": "interactive_architecture.html",
-      "type": "file"
-    },
-    {
-      "id": "scripts/ai-agent/doc_agent.py",
-      "label": "doc_agent.py",
-      "type": "file"
-    },
-    {
-      "id": "scripts/automation/readme_generator.py",
-      "label": "readme_generator.py",
+      "id": "scripts/automation/repo_analyzer.py",
+      "label": "repo_analyzer.py",
       "type": "file"
     },
     {
@@ -81,8 +61,8 @@
       "type": "file"
     },
     {
-      "id": "scripts/automation/repo_analyzer.py",
-      "label": "repo_analyzer.py",
+      "id": "scripts/automation/readme_generator.py",
+      "label": "readme_generator.py",
       "type": "file"
     },
     {
@@ -91,23 +71,13 @@
       "type": "file"
     },
     {
-      "id": "dep_ast",
-      "label": "ast",
-      "type": "dependency"
+      "id": "scripts/ai-agent/doc_agent.py",
+      "label": "doc_agent.py",
+      "type": "file"
     },
     {
       "id": "dep_pyyaml",
       "label": "pyyaml",
-      "type": "dependency"
-    },
-    {
-      "id": "dep_json",
-      "label": "json",
-      "type": "dependency"
-    },
-    {
-      "id": "dep_os",
-      "label": "os",
       "type": "dependency"
     },
     {
@@ -116,15 +86,45 @@
       "type": "dependency"
     },
     {
+      "id": "dep_os",
+      "label": "os",
+      "type": "dependency"
+    },
+    {
       "id": "dep_pathlib",
       "label": "pathlib",
+      "type": "dependency"
+    },
+    {
+      "id": "dep_json",
+      "label": "json",
+      "type": "dependency"
+    },
+    {
+      "id": "dep_ast",
+      "label": "ast",
       "type": "dependency"
     }
   ],
   "edges": [
     {
       "source": "Repository",
+      "target": "docs",
+      "relationship": "contains"
+    },
+    {
+      "source": "docs",
+      "target": "docs/architecture",
+      "relationship": "contains"
+    },
+    {
+      "source": "Repository",
       "target": "scripts",
+      "relationship": "contains"
+    },
+    {
+      "source": "scripts",
+      "target": "scripts/automation",
       "relationship": "contains"
     },
     {
@@ -134,17 +134,12 @@
     },
     {
       "source": "scripts",
-      "target": "scripts/ai-agent",
+      "target": "scripts/analysis",
       "relationship": "contains"
     },
     {
       "source": "scripts",
-      "target": "scripts/automation",
-      "relationship": "contains"
-    },
-    {
-      "source": "Repository",
-      "target": "repo_analysis.json",
+      "target": "scripts/ai-agent",
       "relationship": "contains"
     },
     {
@@ -154,47 +149,7 @@
     },
     {
       "source": "Repository",
-      "target": "ai_summary.md",
-      "relationship": "contains"
-    },
-    {
-      "source": "Repository",
       "target": "index.html",
-      "relationship": "contains"
-    },
-    {
-      "source": "Repository",
-      "target": "README.md",
-      "relationship": "contains"
-    },
-    {
-      "source": "scripts/diagrams",
-      "target": "scripts/diagrams/knowledge_graph.json",
-      "relationship": "contains"
-    },
-    {
-      "source": "scripts/diagrams",
-      "target": "scripts/diagrams/architecture.mermaid",
-      "relationship": "contains"
-    },
-    {
-      "source": "scripts/diagrams",
-      "target": "scripts/diagrams/interactive_architecture.html",
-      "relationship": "contains"
-    },
-    {
-      "source": "scripts/ai-agent",
-      "target": "scripts/ai-agent/doc_agent.py",
-      "relationship": "contains"
-    },
-    {
-      "source": "scripts/automation",
-      "target": "scripts/automation/readme_generator.py",
-      "relationship": "contains"
-    },
-    {
-      "source": "scripts/automation",
-      "target": "scripts/automation/diagram_generator.py",
       "relationship": "contains"
     },
     {
@@ -204,27 +159,27 @@
     },
     {
       "source": "scripts/automation",
+      "target": "scripts/automation/diagram_generator.py",
+      "relationship": "contains"
+    },
+    {
+      "source": "scripts/automation",
+      "target": "scripts/automation/readme_generator.py",
+      "relationship": "contains"
+    },
+    {
+      "source": "scripts/automation",
       "target": "scripts/automation/knowledge_graph.py",
       "relationship": "contains"
     },
     {
-      "source": "Repository",
-      "target": "dep_ast",
-      "relationship": "depends_on"
+      "source": "scripts/ai-agent",
+      "target": "scripts/ai-agent/doc_agent.py",
+      "relationship": "contains"
     },
     {
       "source": "Repository",
       "target": "dep_pyyaml",
-      "relationship": "depends_on"
-    },
-    {
-      "source": "Repository",
-      "target": "dep_json",
-      "relationship": "depends_on"
-    },
-    {
-      "source": "Repository",
-      "target": "dep_os",
       "relationship": "depends_on"
     },
     {
@@ -234,7 +189,22 @@
     },
     {
       "source": "Repository",
+      "target": "dep_os",
+      "relationship": "depends_on"
+    },
+    {
+      "source": "Repository",
       "target": "dep_pathlib",
+      "relationship": "depends_on"
+    },
+    {
+      "source": "Repository",
+      "target": "dep_json",
+      "relationship": "depends_on"
+    },
+    {
+      "source": "Repository",
+      "target": "dep_ast",
       "relationship": "depends_on"
     }
   ]
