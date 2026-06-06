@@ -25,14 +25,12 @@ jobs:
 
     - name: Lint with flake8
       run: |
-        # stop the build if there are Python syntax errors or undefined names
         flake8 . --count --select=E9,F63,F7,F82 --show-source --statistics
-        # exit-zero treats all errors as warnings.
         flake8 . --count --exit-zero --max-complexity=10 --max-line-length=127 --statistics
 
     - name: Security Scan (Bandit)
       run: |
-        bandit -r . -f custom -ll || true
+        bandit -r . -f txt -ll || true
 
     - name: Dependency Audit (Safety)
       continue-on-error: true
@@ -41,5 +39,4 @@ jobs:
 
     - name: Run Tests
       run: |
-        # Replace with actual test command if tests exist
         echo "No tests configured yet. Add tests and run pytest."
