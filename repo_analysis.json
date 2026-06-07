@@ -21,11 +21,11 @@
     "scripts/automation/knowledge_graph.py"
   ],
   "dependencies": [
-    "requests",
-    "pyyaml",
-    "json",
-    "ast",
     "pathlib",
+    "pyyaml",
+    "ast",
+    "json",
+    "requests",
     "os"
   ],
   "frameworks": []
