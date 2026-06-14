@@ -11,19 +11,24 @@
       "type": "directory"
     },
     {
-      "id": "scripts/diagrams",
-      "label": "scripts/diagrams",
+      "id": "scripts/ai-agent",
+      "label": "scripts/ai-agent",
       "type": "directory"
     },
     {
-      "id": "scripts/ai-agent",
-      "label": "scripts/ai-agent",
+      "id": "scripts/diagrams",
+      "label": "scripts/diagrams",
       "type": "directory"
     },
     {
       "id": "scripts/automation",
       "label": "scripts/automation",
       "type": "directory"
+    },
+    {
+      "id": "README.md",
+      "label": "README.md",
+      "type": "file"
     },
     {
       "id": "repo_analysis.json",
@@ -36,33 +41,13 @@
       "type": "file"
     },
     {
-      "id": "ai_summary.md",
-      "label": "ai_summary.md",
-      "type": "file"
-    },
-    {
       "id": "index.html",
       "label": "index.html",
       "type": "file"
     },
     {
-      "id": "README.md",
-      "label": "README.md",
-      "type": "file"
-    },
-    {
-      "id": "scripts/diagrams/knowledge_graph.json",
-      "label": "knowledge_graph.json",
-      "type": "file"
-    },
-    {
-      "id": "scripts/diagrams/architecture.mermaid",
-      "label": "architecture.mermaid",
-      "type": "file"
-    },
-    {
-      "id": "scripts/diagrams/interactive_architecture.html",
-      "label": "interactive_architecture.html",
+      "id": "ai_summary.md",
+      "label": "ai_summary.md",
       "type": "file"
     },
     {
@@ -71,18 +56,23 @@
       "type": "file"
     },
     {
+      "id": "scripts/diagrams/architecture.mermaid",
+      "label": "architecture.mermaid",
+      "type": "file"
+    },
+    {
+      "id": "scripts/diagrams/knowledge_graph.json",
+      "label": "knowledge_graph.json",
+      "type": "file"
+    },
+    {
+      "id": "scripts/diagrams/interactive_architecture.html",
+      "label": "interactive_architecture.html",
+      "type": "file"
+    },
+    {
       "id": "scripts/automation/readme_generator.py",
       "label": "readme_generator.py",
-      "type": "file"
-    },
-    {
-      "id": "scripts/automation/diagram_generator.py",
-      "label": "diagram_generator.py",
-      "type": "file"
-    },
-    {
-      "id": "scripts/automation/repo_analyzer.py",
-      "label": "repo_analyzer.py",
       "type": "file"
     },
     {
@@ -91,9 +81,14 @@
       "type": "file"
     },
     {
-      "id": "dep_pathlib",
-      "label": "pathlib",
-      "type": "dependency"
+      "id": "scripts/automation/repo_analyzer.py",
+      "label": "repo_analyzer.py",
+      "type": "file"
+    },
+    {
+      "id": "scripts/automation/diagram_generator.py",
+      "label": "diagram_generator.py",
+      "type": "file"
     },
     {
       "id": "dep_pyyaml",
@@ -101,8 +96,8 @@
       "type": "dependency"
     },
     {
-      "id": "dep_ast",
-      "label": "ast",
+      "id": "dep_os",
+      "label": "os",
       "type": "dependency"
     },
     {
@@ -111,13 +106,18 @@
       "type": "dependency"
     },
     {
-      "id": "dep_requests",
-      "label": "requests",
+      "id": "dep_ast",
+      "label": "ast",
       "type": "dependency"
     },
     {
-      "id": "dep_os",
-      "label": "os",
+      "id": "dep_pathlib",
+      "label": "pathlib",
+      "type": "dependency"
+    },
+    {
+      "id": "dep_requests",
+      "label": "requests",
       "type": "dependency"
     }
   ],
@@ -129,17 +129,22 @@
     },
     {
       "source": "scripts",
-      "target": "scripts/diagrams",
-      "relationship": "contains"
-    },
-    {
-      "source": "scripts",
       "target": "scripts/ai-agent",
       "relationship": "contains"
     },
     {
       "source": "scripts",
+      "target": "scripts/diagrams",
+      "relationship": "contains"
+    },
+    {
+      "source": "scripts",
       "target": "scripts/automation",
+      "relationship": "contains"
+    },
+    {
+      "source": "Repository",
+      "target": "README.md",
       "relationship": "contains"
     },
     {
@@ -154,22 +159,17 @@
     },
     {
       "source": "Repository",
-      "target": "ai_summary.md",
-      "relationship": "contains"
-    },
-    {
-      "source": "Repository",
       "target": "index.html",
       "relationship": "contains"
     },
     {
       "source": "Repository",
-      "target": "README.md",
+      "target": "ai_summary.md",
       "relationship": "contains"
     },
     {
-      "source": "scripts/diagrams",
-      "target": "scripts/diagrams/knowledge_graph.json",
+      "source": "scripts/ai-agent",
+      "target": "scripts/ai-agent/doc_agent.py",
       "relationship": "contains"
     },
     {
@@ -179,12 +179,12 @@
     },
     {
       "source": "scripts/diagrams",
-      "target": "scripts/diagrams/interactive_architecture.html",
+      "target": "scripts/diagrams/knowledge_graph.json",
       "relationship": "contains"
     },
     {
-      "source": "scripts/ai-agent",
-      "target": "scripts/ai-agent/doc_agent.py",
+      "source": "scripts/diagrams",
+      "target": "scripts/diagrams/interactive_architecture.html",
       "relationship": "contains"
     },
     {
@@ -194,7 +194,7 @@
     },
     {
       "source": "scripts/automation",
-      "target": "scripts/automation/diagram_generator.py",
+      "target": "scripts/automation/knowledge_graph.py",
       "relationship": "contains"
     },
     {
@@ -204,13 +204,8 @@
     },
     {
       "source": "scripts/automation",
-      "target": "scripts/automation/knowledge_graph.py",
+      "target": "scripts/automation/diagram_generator.py",
       "relationship": "contains"
-    },
-    {
-      "source": "Repository",
-      "target": "dep_pathlib",
-      "relationship": "depends_on"
     },
     {
       "source": "Repository",
@@ -219,7 +214,7 @@
     },
     {
       "source": "Repository",
-      "target": "dep_ast",
+      "target": "dep_os",
       "relationship": "depends_on"
     },
     {
@@ -229,12 +224,17 @@
     },
     {
       "source": "Repository",
-      "target": "dep_requests",
+      "target": "dep_ast",
       "relationship": "depends_on"
     },
     {
       "source": "Repository",
-      "target": "dep_os",
+      "target": "dep_pathlib",
+      "relationship": "depends_on"
+    },
+    {
+      "source": "Repository",
+      "target": "dep_requests",
       "relationship": "depends_on"
     }
   ]
