@@ -24,9 +24,9 @@
     "pyyaml",
     "os",
     "json",
+    "requests",
     "ast",
-    "pathlib",
-    "requests"
+    "pathlib"
   ],
   "frameworks": []
 }

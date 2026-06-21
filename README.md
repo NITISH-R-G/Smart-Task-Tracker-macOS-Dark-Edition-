@@ -24,8 +24,8 @@ graph TD
     Deps --> pyyaml[pyyaml]
     Deps --> os[os]
     Deps --> json[json]
+    Deps --> requests[requests]
     Deps --> ast[ast]
-    Deps --> pathlib[pathlib]
     Deps --> MoreDeps[... 1 more]
 
 ```
@@ -39,9 +39,9 @@ graph TD
 - pyyaml
 - os
 - json
+- requests
 - ast
 - pathlib
-- requests
 
 ## Repository Structure
 

@@ -106,6 +106,11 @@
       "type": "dependency"
     },
     {
+      "id": "dep_requests",
+      "label": "requests",
+      "type": "dependency"
+    },
+    {
       "id": "dep_ast",
       "label": "ast",
       "type": "dependency"
@@ -113,11 +118,6 @@
     {
       "id": "dep_pathlib",
       "label": "pathlib",
-      "type": "dependency"
-    },
-    {
-      "id": "dep_requests",
-      "label": "requests",
       "type": "dependency"
     }
   ],
@@ -224,17 +224,17 @@
     },
     {
       "source": "Repository",
+      "target": "dep_requests",
+      "relationship": "depends_on"
+    },
+    {
+      "source": "Repository",
       "target": "dep_ast",
       "relationship": "depends_on"
     },
     {
       "source": "Repository",
       "target": "dep_pathlib",
-      "relationship": "depends_on"
-    },
-    {
-      "source": "Repository",
-      "target": "dep_requests",
       "relationship": "depends_on"
     }
   ]
