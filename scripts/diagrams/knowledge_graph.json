@@ -91,21 +91,6 @@
       "type": "file"
     },
     {
-      "id": "dep_pyyaml",
-      "label": "pyyaml",
-      "type": "dependency"
-    },
-    {
-      "id": "dep_pathlib",
-      "label": "pathlib",
-      "type": "dependency"
-    },
-    {
-      "id": "dep_json",
-      "label": "json",
-      "type": "dependency"
-    },
-    {
       "id": "dep_ast",
       "label": "ast",
       "type": "dependency"
@@ -118,6 +103,21 @@
     {
       "id": "dep_requests",
       "label": "requests",
+      "type": "dependency"
+    },
+    {
+      "id": "dep_json",
+      "label": "json",
+      "type": "dependency"
+    },
+    {
+      "id": "dep_pathlib",
+      "label": "pathlib",
+      "type": "dependency"
+    },
+    {
+      "id": "dep_pyyaml",
+      "label": "pyyaml",
       "type": "dependency"
     }
   ],
@@ -209,21 +209,6 @@
     },
     {
       "source": "Repository",
-      "target": "dep_pyyaml",
-      "relationship": "depends_on"
-    },
-    {
-      "source": "Repository",
-      "target": "dep_pathlib",
-      "relationship": "depends_on"
-    },
-    {
-      "source": "Repository",
-      "target": "dep_json",
-      "relationship": "depends_on"
-    },
-    {
-      "source": "Repository",
       "target": "dep_ast",
       "relationship": "depends_on"
     },
@@ -235,6 +220,21 @@
     {
       "source": "Repository",
       "target": "dep_requests",
+      "relationship": "depends_on"
+    },
+    {
+      "source": "Repository",
+      "target": "dep_json",
+      "relationship": "depends_on"
+    },
+    {
+      "source": "Repository",
+      "target": "dep_pathlib",
+      "relationship": "depends_on"
+    },
+    {
+      "source": "Repository",
+      "target": "dep_pyyaml",
       "relationship": "depends_on"
     }
   ]
