@@ -11,11 +11,6 @@
       "type": "directory"
     },
     {
-      "id": "scripts/diagrams",
-      "label": "scripts/diagrams",
-      "type": "directory"
-    },
-    {
       "id": "scripts/automation",
       "label": "scripts/automation",
       "type": "directory"
@@ -24,6 +19,16 @@
       "id": "scripts/ai-agent",
       "label": "scripts/ai-agent",
       "type": "directory"
+    },
+    {
+      "id": "scripts/diagrams",
+      "label": "scripts/diagrams",
+      "type": "directory"
+    },
+    {
+      "id": "requirements.txt",
+      "label": "requirements.txt",
+      "type": "file"
     },
     {
       "id": "index.html",
@@ -46,23 +51,13 @@
       "type": "file"
     },
     {
-      "id": "requirements.txt",
-      "label": "requirements.txt",
+      "id": "scripts/automation/repo_analyzer.py",
+      "label": "repo_analyzer.py",
       "type": "file"
     },
     {
-      "id": "scripts/diagrams/knowledge_graph.json",
-      "label": "knowledge_graph.json",
-      "type": "file"
-    },
-    {
-      "id": "scripts/diagrams/architecture.mermaid",
-      "label": "architecture.mermaid",
-      "type": "file"
-    },
-    {
-      "id": "scripts/diagrams/interactive_architecture.html",
-      "label": "interactive_architecture.html",
+      "id": "scripts/automation/diagram_generator.py",
+      "label": "diagram_generator.py",
       "type": "file"
     },
     {
@@ -76,19 +71,34 @@
       "type": "file"
     },
     {
-      "id": "scripts/automation/diagram_generator.py",
-      "label": "diagram_generator.py",
-      "type": "file"
-    },
-    {
-      "id": "scripts/automation/repo_analyzer.py",
-      "label": "repo_analyzer.py",
-      "type": "file"
-    },
-    {
       "id": "scripts/ai-agent/doc_agent.py",
       "label": "doc_agent.py",
       "type": "file"
+    },
+    {
+      "id": "scripts/diagrams/knowledge_graph.json",
+      "label": "knowledge_graph.json",
+      "type": "file"
+    },
+    {
+      "id": "scripts/diagrams/interactive_architecture.html",
+      "label": "interactive_architecture.html",
+      "type": "file"
+    },
+    {
+      "id": "scripts/diagrams/architecture.mermaid",
+      "label": "architecture.mermaid",
+      "type": "file"
+    },
+    {
+      "id": "dep_pathlib",
+      "label": "pathlib",
+      "type": "dependency"
+    },
+    {
+      "id": "dep_ast",
+      "label": "ast",
+      "type": "dependency"
     },
     {
       "id": "dep_os",
@@ -106,18 +116,8 @@
       "type": "dependency"
     },
     {
-      "id": "dep_ast",
-      "label": "ast",
-      "type": "dependency"
-    },
-    {
       "id": "dep_json",
       "label": "json",
-      "type": "dependency"
-    },
-    {
-      "id": "dep_pathlib",
-      "label": "pathlib",
       "type": "dependency"
     }
   ],
@@ -129,17 +129,22 @@
     },
     {
       "source": "scripts",
-      "target": "scripts/diagrams",
-      "relationship": "contains"
-    },
-    {
-      "source": "scripts",
       "target": "scripts/automation",
       "relationship": "contains"
     },
     {
       "source": "scripts",
       "target": "scripts/ai-agent",
+      "relationship": "contains"
+    },
+    {
+      "source": "scripts",
+      "target": "scripts/diagrams",
+      "relationship": "contains"
+    },
+    {
+      "source": "Repository",
+      "target": "requirements.txt",
       "relationship": "contains"
     },
     {
@@ -163,23 +168,13 @@
       "relationship": "contains"
     },
     {
-      "source": "Repository",
-      "target": "requirements.txt",
+      "source": "scripts/automation",
+      "target": "scripts/automation/repo_analyzer.py",
       "relationship": "contains"
     },
     {
-      "source": "scripts/diagrams",
-      "target": "scripts/diagrams/knowledge_graph.json",
-      "relationship": "contains"
-    },
-    {
-      "source": "scripts/diagrams",
-      "target": "scripts/diagrams/architecture.mermaid",
-      "relationship": "contains"
-    },
-    {
-      "source": "scripts/diagrams",
-      "target": "scripts/diagrams/interactive_architecture.html",
+      "source": "scripts/automation",
+      "target": "scripts/automation/diagram_generator.py",
       "relationship": "contains"
     },
     {
@@ -193,19 +188,34 @@
       "relationship": "contains"
     },
     {
-      "source": "scripts/automation",
-      "target": "scripts/automation/diagram_generator.py",
-      "relationship": "contains"
-    },
-    {
-      "source": "scripts/automation",
-      "target": "scripts/automation/repo_analyzer.py",
-      "relationship": "contains"
-    },
-    {
       "source": "scripts/ai-agent",
       "target": "scripts/ai-agent/doc_agent.py",
       "relationship": "contains"
+    },
+    {
+      "source": "scripts/diagrams",
+      "target": "scripts/diagrams/knowledge_graph.json",
+      "relationship": "contains"
+    },
+    {
+      "source": "scripts/diagrams",
+      "target": "scripts/diagrams/interactive_architecture.html",
+      "relationship": "contains"
+    },
+    {
+      "source": "scripts/diagrams",
+      "target": "scripts/diagrams/architecture.mermaid",
+      "relationship": "contains"
+    },
+    {
+      "source": "Repository",
+      "target": "dep_pathlib",
+      "relationship": "depends_on"
+    },
+    {
+      "source": "Repository",
+      "target": "dep_ast",
+      "relationship": "depends_on"
     },
     {
       "source": "Repository",
@@ -224,17 +234,7 @@
     },
     {
       "source": "Repository",
-      "target": "dep_ast",
-      "relationship": "depends_on"
-    },
-    {
-      "source": "Repository",
       "target": "dep_json",
-      "relationship": "depends_on"
-    },
-    {
-      "source": "Repository",
-      "target": "dep_pathlib",
       "relationship": "depends_on"
     }
   ]
