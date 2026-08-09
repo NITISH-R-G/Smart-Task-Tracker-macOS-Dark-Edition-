@@ -91,18 +91,8 @@
       "type": "file"
     },
     {
-      "id": "dep_pyyaml",
-      "label": "pyyaml",
-      "type": "dependency"
-    },
-    {
-      "id": "dep_pathlib",
-      "label": "pathlib",
-      "type": "dependency"
-    },
-    {
-      "id": "dep_os",
-      "label": "os",
+      "id": "dep_requests",
+      "label": "requests",
       "type": "dependency"
     },
     {
@@ -111,13 +101,23 @@
       "type": "dependency"
     },
     {
-      "id": "dep_ast",
-      "label": "ast",
+      "id": "dep_pyyaml",
+      "label": "pyyaml",
       "type": "dependency"
     },
     {
-      "id": "dep_requests",
-      "label": "requests",
+      "id": "dep_os",
+      "label": "os",
+      "type": "dependency"
+    },
+    {
+      "id": "dep_pathlib",
+      "label": "pathlib",
+      "type": "dependency"
+    },
+    {
+      "id": "dep_ast",
+      "label": "ast",
       "type": "dependency"
     }
   ],
@@ -209,17 +209,7 @@
     },
     {
       "source": "Repository",
-      "target": "dep_pyyaml",
-      "relationship": "depends_on"
-    },
-    {
-      "source": "Repository",
-      "target": "dep_pathlib",
-      "relationship": "depends_on"
-    },
-    {
-      "source": "Repository",
-      "target": "dep_os",
+      "target": "dep_requests",
       "relationship": "depends_on"
     },
     {
@@ -229,12 +219,22 @@
     },
     {
       "source": "Repository",
-      "target": "dep_ast",
+      "target": "dep_pyyaml",
       "relationship": "depends_on"
     },
     {
       "source": "Repository",
-      "target": "dep_requests",
+      "target": "dep_os",
+      "relationship": "depends_on"
+    },
+    {
+      "source": "Repository",
+      "target": "dep_pathlib",
+      "relationship": "depends_on"
+    },
+    {
+      "source": "Repository",
+      "target": "dep_ast",
       "relationship": "depends_on"
     }
   ]

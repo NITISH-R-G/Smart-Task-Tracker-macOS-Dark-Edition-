@@ -21,12 +21,12 @@
     "scripts/diagrams/architecture.mermaid"
   ],
   "dependencies": [
-    "pyyaml",
-    "pathlib",
-    "os",
+    "requests",
     "json",
-    "ast",
-    "requests"
+    "pyyaml",
+    "os",
+    "pathlib",
+    "ast"
   ],
   "frameworks": []
 }
