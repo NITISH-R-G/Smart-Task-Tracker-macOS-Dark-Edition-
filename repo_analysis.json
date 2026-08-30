@@ -22,11 +22,11 @@
   ],
   "dependencies": [
     "json",
-    "pathlib",
     "os",
-    "requests",
+    "pathlib",
     "pyyaml",
-    "ast"
+    "ast",
+    "requests"
   ],
   "frameworks": []
 }
