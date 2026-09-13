@@ -21,12 +21,12 @@
     "scripts/diagrams/knowledge_graph.json"
   ],
   "dependencies": [
-    "os",
-    "pyyaml",
-    "json",
     "ast",
+    "pathlib",
+    "json",
+    "os",
     "requests",
-    "pathlib"
+    "pyyaml"
   ],
   "frameworks": []
 }
