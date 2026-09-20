@@ -22,10 +22,10 @@ graph TD
     Root --> Root_files[Root Files: 5]
     Root --> Deps[Dependencies]
     Deps --> ast[ast]
+    Deps --> os[os]
+    Deps --> pyyaml[pyyaml]
     Deps --> pathlib[pathlib]
     Deps --> json[json]
-    Deps --> os[os]
-    Deps --> requests[requests]
     Deps --> MoreDeps[... 1 more]
 
 ```
@@ -37,11 +37,11 @@ graph TD
 
 **Key Dependencies:**
 - ast
+- os
+- pyyaml
 - pathlib
 - json
-- os
 - requests
-- pyyaml
 
 ## Repository Structure
 
