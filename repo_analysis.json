@@ -21,12 +21,12 @@
     "scripts/ai-agent/doc_agent.py"
   ],
   "dependencies": [
-    "os",
-    "ast",
-    "pyyaml",
     "requests",
     "json",
-    "pathlib"
+    "ast",
+    "pyyaml",
+    "pathlib",
+    "os"
   ],
   "frameworks": []
 }
