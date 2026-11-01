@@ -26,13 +26,8 @@
       "type": "directory"
     },
     {
-      "id": "repo_analysis.json",
-      "label": "repo_analysis.json",
-      "type": "file"
-    },
-    {
-      "id": "index.html",
-      "label": "index.html",
+      "id": "ai_summary.md",
+      "label": "ai_summary.md",
       "type": "file"
     },
     {
@@ -41,13 +36,23 @@
       "type": "file"
     },
     {
-      "id": "ai_summary.md",
-      "label": "ai_summary.md",
+      "id": "repo_analysis.json",
+      "label": "repo_analysis.json",
       "type": "file"
     },
     {
       "id": "README.md",
       "label": "README.md",
+      "type": "file"
+    },
+    {
+      "id": "index.html",
+      "label": "index.html",
+      "type": "file"
+    },
+    {
+      "id": "scripts/diagrams/knowledge_graph.json",
+      "label": "knowledge_graph.json",
       "type": "file"
     },
     {
@@ -61,23 +66,8 @@
       "type": "file"
     },
     {
-      "id": "scripts/diagrams/knowledge_graph.json",
-      "label": "knowledge_graph.json",
-      "type": "file"
-    },
-    {
-      "id": "scripts/automation/readme_generator.py",
-      "label": "readme_generator.py",
-      "type": "file"
-    },
-    {
       "id": "scripts/automation/diagram_generator.py",
       "label": "diagram_generator.py",
-      "type": "file"
-    },
-    {
-      "id": "scripts/automation/repo_analyzer.py",
-      "label": "repo_analyzer.py",
       "type": "file"
     },
     {
@@ -86,13 +76,23 @@
       "type": "file"
     },
     {
+      "id": "scripts/automation/repo_analyzer.py",
+      "label": "repo_analyzer.py",
+      "type": "file"
+    },
+    {
+      "id": "scripts/automation/readme_generator.py",
+      "label": "readme_generator.py",
+      "type": "file"
+    },
+    {
       "id": "scripts/ai-agent/doc_agent.py",
       "label": "doc_agent.py",
       "type": "file"
     },
     {
-      "id": "dep_pyyaml",
-      "label": "pyyaml",
+      "id": "dep_pathlib",
+      "label": "pathlib",
       "type": "dependency"
     },
     {
@@ -101,13 +101,8 @@
       "type": "dependency"
     },
     {
-      "id": "dep_pathlib",
-      "label": "pathlib",
-      "type": "dependency"
-    },
-    {
-      "id": "dep_os",
-      "label": "os",
+      "id": "dep_json",
+      "label": "json",
       "type": "dependency"
     },
     {
@@ -116,8 +111,13 @@
       "type": "dependency"
     },
     {
-      "id": "dep_json",
-      "label": "json",
+      "id": "dep_pyyaml",
+      "label": "pyyaml",
+      "type": "dependency"
+    },
+    {
+      "id": "dep_os",
+      "label": "os",
       "type": "dependency"
     }
   ],
@@ -144,12 +144,7 @@
     },
     {
       "source": "Repository",
-      "target": "repo_analysis.json",
-      "relationship": "contains"
-    },
-    {
-      "source": "Repository",
-      "target": "index.html",
+      "target": "ai_summary.md",
       "relationship": "contains"
     },
     {
@@ -159,12 +154,22 @@
     },
     {
       "source": "Repository",
-      "target": "ai_summary.md",
+      "target": "repo_analysis.json",
       "relationship": "contains"
     },
     {
       "source": "Repository",
       "target": "README.md",
+      "relationship": "contains"
+    },
+    {
+      "source": "Repository",
+      "target": "index.html",
+      "relationship": "contains"
+    },
+    {
+      "source": "scripts/diagrams",
+      "target": "scripts/diagrams/knowledge_graph.json",
       "relationship": "contains"
     },
     {
@@ -178,18 +183,13 @@
       "relationship": "contains"
     },
     {
-      "source": "scripts/diagrams",
-      "target": "scripts/diagrams/knowledge_graph.json",
-      "relationship": "contains"
-    },
-    {
-      "source": "scripts/automation",
-      "target": "scripts/automation/readme_generator.py",
-      "relationship": "contains"
-    },
-    {
       "source": "scripts/automation",
       "target": "scripts/automation/diagram_generator.py",
+      "relationship": "contains"
+    },
+    {
+      "source": "scripts/automation",
+      "target": "scripts/automation/knowledge_graph.py",
       "relationship": "contains"
     },
     {
@@ -199,7 +199,7 @@
     },
     {
       "source": "scripts/automation",
-      "target": "scripts/automation/knowledge_graph.py",
+      "target": "scripts/automation/readme_generator.py",
       "relationship": "contains"
     },
     {
@@ -209,7 +209,7 @@
     },
     {
       "source": "Repository",
-      "target": "dep_pyyaml",
+      "target": "dep_pathlib",
       "relationship": "depends_on"
     },
     {
@@ -219,12 +219,7 @@
     },
     {
       "source": "Repository",
-      "target": "dep_pathlib",
-      "relationship": "depends_on"
-    },
-    {
-      "source": "Repository",
-      "target": "dep_os",
+      "target": "dep_json",
       "relationship": "depends_on"
     },
     {
@@ -234,7 +229,12 @@
     },
     {
       "source": "Repository",
-      "target": "dep_json",
+      "target": "dep_pyyaml",
+      "relationship": "depends_on"
+    },
+    {
+      "source": "Repository",
+      "target": "dep_os",
       "relationship": "depends_on"
     }
   ]

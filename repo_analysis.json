@@ -6,27 +6,27 @@
     "scripts/ai-agent"
   ],
   "files": [
-    "repo_analysis.json",
-    "index.html",
-    "requirements.txt",
     "ai_summary.md",
+    "requirements.txt",
+    "repo_analysis.json",
     "README.md",
+    "index.html",
+    "scripts/diagrams/knowledge_graph.json",
     "scripts/diagrams/interactive_architecture.html",
     "scripts/diagrams/architecture.mermaid",
-    "scripts/diagrams/knowledge_graph.json",
-    "scripts/automation/readme_generator.py",
     "scripts/automation/diagram_generator.py",
-    "scripts/automation/repo_analyzer.py",
     "scripts/automation/knowledge_graph.py",
+    "scripts/automation/repo_analyzer.py",
+    "scripts/automation/readme_generator.py",
     "scripts/ai-agent/doc_agent.py"
   ],
   "dependencies": [
-    "pyyaml",
-    "ast",
     "pathlib",
-    "os",
+    "ast",
+    "json",
     "requests",
-    "json"
+    "pyyaml",
+    "os"
   ],
   "frameworks": []
 }
