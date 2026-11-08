@@ -21,11 +21,11 @@ graph TD
     scripts --> scripts_files[Files: 8]
     Root --> Root_files[Root Files: 5]
     Root --> Deps[Dependencies]
-    Deps --> pathlib[pathlib]
-    Deps --> ast[ast]
-    Deps --> json[json]
-    Deps --> requests[requests]
     Deps --> pyyaml[pyyaml]
+    Deps --> requests[requests]
+    Deps --> json[json]
+    Deps --> pathlib[pathlib]
+    Deps --> os[os]
     Deps --> MoreDeps[... 1 more]
 
 ```
@@ -36,12 +36,12 @@ graph TD
 - Standard libraries/Unknown
 
 **Key Dependencies:**
-- pathlib
-- ast
-- json
-- requests
 - pyyaml
+- requests
+- json
+- pathlib
 - os
+- ast
 
 ## Repository Structure
 
